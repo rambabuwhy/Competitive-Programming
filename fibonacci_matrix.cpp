@@ -123,6 +123,6 @@ int main()
     cin >> n;
     n++;
 
-    cout << n - 1 << "th fibanocci: " << getfib(n);
+    cout << n - 1 << "th fibonacci: " << getfib(n);
     return 0;
 }
