@@ -38,33 +38,26 @@
 
 using namespace std;
 //------------------------------------------------------------------------------
-string baseConversion(int n, int base)
+
+int wordCount(string str)
 {
-    string result;
-    int i = 0;
-    while (n)
+    int result = 0;
+    stringstream ss(str);
+
+    string word;
+    while (ss >> word)
     {
-        result.insert(result.begin() + (i++), n % base + '0');
-        //result.push_back();
-        n = n / base;
+
+        cout << word << endl;
+        result++;
     }
 
-    reverse(result.begin(), result.end());
     return result;
 }
-
 int main()
 {
 
-    cout << "Enter digit and base:";
-    int d = 0;
-    int base = 0;
-    cin >> d;
-    while (d > 0)
-    {
-        cin >> base;
-        cout << baseConversion(d, base) << endl;
-        cin >> d;
-    }
+    cout << wordCount("rambabu is, a  good-and bad boy") << endl;
+    ;
     return 0;
 }
